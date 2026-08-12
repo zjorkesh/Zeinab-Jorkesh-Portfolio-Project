@@ -1,5 +1,6 @@
 {
   "editor.formatOnSave": true,
   "notebook.formatOnSave.enabled": true,
-  "editor.formatOnSaveMode": "modifications"
+  "editor.formatOnSaveMode": "modifications",
+  "editor.wordWrap": "on"
 }
