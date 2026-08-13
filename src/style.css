@@ -11,6 +11,22 @@
     border-radius: 5px;
 }
 
+.nav-item.dropdown {
+    position: relative;
+}
+
+.nav-item.dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: var(--secondary-color);
+    border: none;
+}
 
 
 body {
