@@ -2,9 +2,53 @@
     --primary-color: #FEFBF5;
     --secondary-color: #FCF9F6;
     --third-color: #FFCA2C;
-        --border: solid 1px #F1EEE8;
+    --border: solid 1px #F1EEE8;
     --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
+
+
+/***** General *****/
+
+body {
+    margin: 60px auto;
+    max-width: 800px;
+    background-color: #FEFBF5;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    font-size: 96px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 24px;
+    opacity: 0.7;
+}
+
+p {
+    padding: 20px;
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.more-button {
+    text-align: center;
+}
+
+/***** Navbar *****/
+
 .navbar {
     background-color: #FEFAF5;
     border: var(--border);
@@ -29,59 +73,29 @@
 }
 
 
-body {
-    margin: 60px auto;
-    max-width: 800px;
-    background-color: #fefbf5;
+/***** Shared Sections *****/
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
 }
 
-h1,
-h2,
-h3 {
-    text-align: center;
+.title span {
+    width: 100px;
+    height: 1px;
+    background-color: gray;
+}
+
+.title h3 {
     margin: 0;
+    font-size: 20px;
+}
+.work-inquiry {
+    margin-top: 16px;
 }
 
-h1 {
-    font-size: 96px;
-}
-
-h2 {
-    font-size: 48px;
-}
-
-h3 {
-    font-size: 24px;
-    opacity: 0.7;
-}
-
-p {
-
-    padding: 20px;
-    border-radius: 4px;
-    font-size: 18px;
-    line-height: 1.5;
-    text-align: justify;
-}
-
-@media (max-width: 768px) {
-    body {
-        margin: 30px auto;
-        padding: 0 15px;
-    }
-
-        h1 {
-            font-size: 56px;
-        }
-
-        h2 {
-            font-size: 36px;
-        }
-
-        h3 {
-            font-size: 20px;
-        }
-}
 .inquiry-box {
     background-color: var(--secondary-color);
     border: var(--border);
@@ -92,7 +106,13 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: end;
+}
 
+.inquiry-text {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-style: italic;
 }
 
 .btn-inquiry {
@@ -106,7 +126,6 @@ p {
     text-align: center;
     display: inline-block;
     font-weight: bold;
-
 }
 
 .btn-inquiry:hover {
@@ -114,13 +133,7 @@ p {
     border: solid 1px #FFCA2C;
 }
 
-.inquiry-text {
-    font-size: 20px;
-    font-weight: 500;
-    text-transform: capitalize;
-    font-style: italic;
-}
-/*****Home html ******/
+/***** Home *****/
 
 .hero {
     background-color: var(--secondary-color);
@@ -171,18 +184,30 @@ p {
     border-radius: 10px;
     text-decoration: none;
     border: solid 1px #FFCA2C;
-
 }
 
 .btn-learn-more:hover {
     background-color: #ffdb6e;
-
 }
 
-.more-button {
-    text-align: center;
+.btn-main {
+    display: inline-block;
+    font-size: 18px;
+    padding: 8px 55px;
+    line-height: 1.2;
+    background: #ffdb6e;
+    border: solid 1px #FFCA2C;
+    transition: all 1s ease-out;
+    color: rgb(51, 51, 51);
+    border-radius: 10px;
+    text-decoration: none;
 }
-/*****About me html ******/
+
+.btn-main:hover {
+    background-color: var(--primary-color);
+    border: solid 1px #FFCA2C;
+}
+/***** About Me *****/
 .about-me-section {
     background: var(--secondary-color);
     border: var(--border);
@@ -246,45 +271,9 @@ p {
     text-align: center;
 }
 
-.title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
 
-}
+/***** Technologies *****/
 
-.title span {
-    width: 100px;
-    height: 1px;
-    background-color: gray;
-}
-
-.title h3 {
-    margin: 0;
-    font-size: 20px;
-}
-.btn-small {
-    display: inline-block;
-    font-size: 18px;
-    padding: 8px 55px;
-    line-height: 1.2;
-    background: #ffdb6e;
-    transition: all 1s ease-out;
-    color: rgb(51, 51, 51);
-    border-radius: 10px;
-    text-decoration: none;
-
-}
-
-.btn-small:hover {
-    background-color: #ffdb6e;
-    border: solid 1px #FFCA2C;
-}
-
-.more-button {
-    text-align: center;
-}
 .tech-icons {
     background-color: var(--secondary-color);
     border: var(--border);
@@ -295,7 +284,6 @@ p {
     font-size: 10px;
     margin: 0;
     padding: 0;
-
 }
 
 .tech-icons .row {
@@ -314,6 +302,7 @@ p {
 }
 
 
+/***** Connect *****/
 
 .connect p {
     font-size: 14px;
@@ -336,7 +325,6 @@ p {
     justify-content: space-around;
     margin: 0;
     padding: 5px;
-
 }
 
 .connect .col-4 {
@@ -352,19 +340,9 @@ p {
     border: var(--border);
     border-radius: 5px;
 }
-footer p {
-    font-size: 15px;
-    text-align: center;
-}
 
-footer a {
-    color: #885DF1;
-    text-shadow: 1px 1px 2px rgba(80, 60, 0, 0.15);
-    font-weight: bold;
 
-}
-
-/*****Projects html ******/
+/***** Projects *****/
 
 .project-image {
     width: 100%;
@@ -376,7 +354,7 @@ footer a {
     font-size: 14px;
     text-align: center;
 }
-/*****Work inquiry****/
+/***** Work Inquiry Form *****/
 label {
     font-size: 20px;
 }
@@ -433,7 +411,43 @@ label {
 .title h1 {
     font-size: 45px;
 }
+
 .success-message {
     display: none;
     text-align: center;
+}
+/***** Footer *****/
+
+footer p {
+    font-size: 15px;
+    text-align: center;
+}
+
+footer a {
+    color: #885DF1;
+    text-shadow: 1px 1px 2px rgba(80, 60, 0, 0.15);
+    font-weight: bold;
+}
+
+
+/***** Responsive Design *****/
+
+@media (max-width: 768px) {
+
+    body {
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+
+    h1 {
+        font-size: 56px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
 }
