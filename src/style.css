@@ -433,3 +433,7 @@ label {
 .title h1 {
     font-size: 45px;
 }
+.success-message {
+    display: none;
+    text-align: center;
+}
